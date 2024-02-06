@@ -1,0 +1,59 @@
+<!-- <h2> Employee List</h2>
+<table class = "table table-striped">
+    <thead>
+        <tr>
+            <th> First Name</th>
+            <th> Last Name </th>
+            <th> Email Id</th>
+            <th> Actions </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let employee of employees" >
+            <td> {{ employee.itemName }} </td>
+            <td> {{ employee.quantity }} </td>
+            <td> {{ employee.price }} </td>
+            <td> {{ employee.total }} </td>
+            <td> {{ employee.emailId }} </td>
+            <td>
+                <button (click) = "updateEmployee(employee.id)" class = "btn btn-info"> Update</button>
+                <button (click) = "deleteEmployee(employee.id)" class = "btn btn-danger" style="margin-left: 10px"> Delete</button>
+                <button (click) = "employeeDetails(employee.id)" class = "btn btn-info" style="margin-left: 10px"> View</button>
+            </td> 
+        </tr>
+    </tbody>
+</table> -->
+
+<h2>Employee List</h2>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>Item Name</th>
+      <th>Quantity</th>
+      <th>Price</th>
+      <th>Total</th>
+      <th>Email Id</th>
+      <!-- Add columns for EmployeeDetails properties -->
+      <th>Street</th>
+      <th>State</th>
+      <!-- Add other properties if needed -->
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let employee of employees">
+      <td>{{ employee.itemName }}</td>
+      <td>{{ employee.quantity }}</td>
+      <td>{{ employee.price }}</td>
+      <td>{{ employee.total }}</td>
+      <td>{{ employee.emailId }}</td>
+      <!-- Display EmployeeDetails properties -->
+      <td>{{ employee.empDetils?.state }}</td>
+      <td>{{ employee.empDetils?.street }}</td>
+      <!-- Display other properties if needed -->
+      <td><!-- Add actions here --></td>
+    </tr>
+  </tbody>
+</table>
+
+
